@@ -7,9 +7,9 @@ app.get('/', function(req, res){
   });
 
   io.on('connection', function(socket){
-    console.log('Participante conectado');
+    console.log('Internauta conectado');
     socket.on('disconnect', function(){
-      console.log('Participante desconectado');
+      console.log('Internauta desconectado');
     });
   });
 
@@ -20,5 +20,5 @@ io.on('connection', function(socket){
 });
 
 http.listen(3000, function(){
-  console.log('Ouvindo na porta *:3000');
+  console.log('Rodando na porta *:3000');
 });
